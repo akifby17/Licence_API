@@ -1,0 +1,89 @@
+[
+  {
+    "ContainingType": "LicenseAPI.Controllers.LicenseController",
+    "Method": "HealthCheck",
+    "RelativePath": "api/License/health",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "LicenseAPI.DTOs.ApiResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LicenseAPI.Controllers.LicenseController",
+    "Method": "GetLicenseStatus",
+    "RelativePath": "api/License/status/{licensePrefix}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "licensePrefix",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "LicenseAPI.DTOs.ApiResponse\u00601[[LicenseAPI.DTOs.LicenseInfo, LicenseAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "LicenseAPI.DTOs.ApiResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "LicenseAPI.Controllers.LicenseController",
+    "Method": "ValidateLicense",
+    "RelativePath": "api/License/validate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LicenseAPI.DTOs.LicenseValidationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "LicenseAPI.DTOs.ApiResponse\u00601[[LicenseAPI.DTOs.LicenseValidationResponse, LicenseAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "LicenseAPI.DTOs.ApiResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "LicenseAPI.DTOs.ApiResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  }
+]
